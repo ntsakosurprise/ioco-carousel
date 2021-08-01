@@ -6,8 +6,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC",
-  "dependencies": {
-    "anzii": "^2.0.8"
-  },
+  "dependencies": {},
   "readmeFilename": "README.md"
 }
