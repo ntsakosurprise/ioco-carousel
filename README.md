@@ -1,7 +1,7 @@
 
 # Introduction
 
-An anzii framework plugin that shows how to create anzii plugins.
+This is a 5-card carousel assessment for iOCO.
 
 # Installation 
 
