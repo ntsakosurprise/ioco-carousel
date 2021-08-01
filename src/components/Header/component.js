@@ -6,7 +6,9 @@ class Header extends Component{
     render(){
 
         return(
-            <></>
+            <header>
+                Hi there, I am the header component
+            </header>
         )
     }
 }

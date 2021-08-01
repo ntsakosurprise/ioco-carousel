@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Routes from '../Routes/component'
 
 class Root extends Component{
 
@@ -6,7 +7,7 @@ class Root extends Component{
 
         return(
 
-            <></>
+            <Routes />
         )
     }
 
