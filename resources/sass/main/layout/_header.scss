@@ -6,6 +6,7 @@
     text-align: center;
     padding-top: 25px;
     box-shadow: -15px 10px 25px 5px rgba(146, 104, 104, 0.04);
+    margin-bottom: 120px;
 
     &__brand,&__primary-nav,&__secondary-nav{
 
@@ -48,6 +49,18 @@
                 font-size: 1.5rem;
                 display: inline-block;
                 text-decoration: none;
+                color: $color-black;
+            }
+
+            &:hover::after{
+
+                width: 8px;
+                height: 8px;
+                background-color: #ffcc00;
+                margin-right: 15px;
+                border-radius: 50%;
+                display: inline-block;
+
             }
         }
 
@@ -66,6 +79,7 @@
             &-link{
 
                 width: 30%;
+                color: $color-black;
 
                 &-circle,&-text{
                     display: inline-block;
@@ -86,6 +100,7 @@
                 &-text{
                     
                     font-size: 1.8rem;
+                    opacity: .5;
                   
                 }
             }
