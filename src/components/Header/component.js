@@ -25,8 +25,8 @@ class Header extends Component{
                    <nav className="header__secondary-nav--nav">
                         
                         <Link to='/personal' className="header__secondary-nav--nav-link">
-                            <span className="header__secondary-nav--nav-circle" />
-                            <span className="header__secondary-nav--nav-text">
+                            <span className="header__secondary-nav--nav-link-circle" />
+                            <span className="header__secondary-nav--nav-link-text">
                                 Personal
                             </span></Link>
 
