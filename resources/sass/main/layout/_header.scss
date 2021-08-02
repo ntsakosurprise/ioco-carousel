@@ -2,9 +2,9 @@
 
     width: 100%;
     background-color: $color-white;
-    height: 50px;
+    height: 70px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 25px;
     box-shadow: -15px 10px 25px 5px rgba(146, 104, 104, 0.04);
 
     &__brand,&__primary-nav,&__secondary-nav{
@@ -22,7 +22,7 @@
 
             &-logo{
 
-                width: 50px;
+                width: 70px;
                 border: solid 3px $color-white
             }
         }
