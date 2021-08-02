@@ -52,7 +52,7 @@
                 color: $color-black;
             }
 
-            &:hover::after{
+            &::after{
 
                 width: 8px;
                 height: 8px;
@@ -60,8 +60,18 @@
                 margin-right: 15px;
                 border-radius: 50%;
                 display: inline-block;
-
             }
+
+            // &:hover{
+
+            //     width: 8px;
+            //     height: 8px;
+            //     background-color: #ffcc00;
+            //     margin-right: 15px;
+            //     border-radius: 50%;
+            //     display: inline-block;
+
+            // }
         }
 
         
