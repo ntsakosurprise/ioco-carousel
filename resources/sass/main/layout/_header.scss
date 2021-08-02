@@ -10,15 +10,62 @@
     &__brand{
 
         width: 20%;
+
+        &--link{
+
+            text-decoration: none;
+
+            &-logo{
+
+                width: 50px;
+                border: solid 3px $color-grey
+            }
+        }
     }
 
     &__primary-nav{
 
         width: 65%;
+
+        &--nav{
+
+            width: 100%;
+
+            &-link{
+
+                width: 30%;
+                margin-right: 2%;
+                font-size: 1.5rem;
+            }
+        }
+
+        
     }
 
     &__secondary-nav{
 
         width: 15%;
+
+        &--nav{
+
+            width: 100%;
+
+            &-link{
+
+                width: 30%;
+                &-cirlce{
+
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $color-primary;
+                    margin-right: 25px;
+                }
+                &-text{
+                    display: inline-block;
+                    font-size: 1.8rem;
+                }
+            }
+        }
     }
 }
