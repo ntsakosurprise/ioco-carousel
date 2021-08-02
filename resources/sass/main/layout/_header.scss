@@ -1,0 +1,24 @@
+.header{
+
+    width: 100%;
+
+    &__brand,&__primary-nav,&__secondary-nav{
+
+        float: left;
+    }
+
+    &__brand{
+
+        width: 20%;
+    }
+
+    &__primary-nav{
+
+        width: 65%;
+    }
+
+    &__secondary-nav{
+
+        width: 15%;
+    }
+}
