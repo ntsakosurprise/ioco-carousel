@@ -68,6 +68,44 @@ class Carousel extends Component{
 
     }
 
+    getNextCard = ()=>{
+
+        const {state} = this 
+        const newCarouselItems = [...state.carouselItems]
+        newCarouselItems.push(newCarouselItems.shift()) 
+
+        this.setState({carouselItems: newCarouselItems})
+
+
+    }
+
+    getPreviousCard = ()=>{
+
+        const {state} = this 
+        const newCarouselItems = [...state.carouselItems]
+        newCarouselItems.unshift(newCarouselItems.pop()) 
+
+        this.setState({carouselItems: newCarouselItems})
+
+
+    }
+
+
+
+
+    showCardInContext = (navigationDirection='next',e=null)=>{
+
+        if(e) e.preventDefault()
+        if(navigationDirection === 'next'){
+
+            this.getNextCard()
+
+        }else{
+            this.getPreviousCard()
+        }
+
+    }
+
     render(){
 
         return(
@@ -75,12 +113,12 @@ class Carousel extends Component{
 
                 {this.getCarouselItems()}
                 <section className="carousel__navigators">
-                    <button className="carousel__navigators--p-control">
+                    <button className="carousel__navigators--p-control" onClick={(e)=>this.showCardInContext('previous',e)}>
                         <span className="carousel__navigators--p-control-text">
                             Previous
                         </span>
                     </button>
-                    <button className="carousel__navigators--n-control">
+                    <button className="carousel__navigators--n-control" onClick={(e)=>this.showCardInContext('next',e)}>
                         <span className="carousel__navigators--n-control-text">
                             Next
                         </span>
