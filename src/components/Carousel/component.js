@@ -53,6 +53,14 @@ class Carousel extends Component{
                      <div className="carousel__item--content">
                          <h4 className="carousel__item--content-head">{item.text}</h4>
                      </div>
+                     {
+                     
+                            i+1 === 3 
+                                ? <section className="carousel__item--action">
+                                        <button className="carousel__item--action-btn">Start Here</button>
+                                    </section>
+                                : null
+                     }
                    </section>
         })
 
