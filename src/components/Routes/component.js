@@ -6,7 +6,7 @@ import routes from '../Essentials/routes'
 
 
 
-class Router extends Component{
+class Routes extends Component{
 
     render(){
 
@@ -26,4 +26,4 @@ class Router extends Component{
     }
 }
 
-export default Router
+export default Routes

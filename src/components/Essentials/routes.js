@@ -8,27 +8,27 @@ import Store from '../Store/component'
 export default [
 
     {
-        Component: Home,
+        component: Home,
         name: 'Home',
         path: '/'
     },
     {
-        Component: Personal,
+        component: Personal,
         name: 'Personal',
         path: '/personal'
     },
     {
-        Component: HelpSupport,
+        component: HelpSupport,
         name: 'Help',
         path: '/help-support'
     },
     {
-        Component: ProductServices,
+        component: ProductServices,
         name: 'Product',
         path: '/products-services'
     },
     {
-        Component: Store,
+        component: Store,
         name: 'Store',
         path: '/store'
     }
