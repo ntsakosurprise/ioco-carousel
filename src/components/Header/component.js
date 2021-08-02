@@ -9,7 +9,7 @@ class Header extends Component{
             <header className="header">
                <section className="header__brand">
                    <Link to='/'  className="header__brand--link">
-                   <img src="/img/mtn_logo.png" alt="MTN Logo" className="header__brand--link-logo" />
+                    <img src="/img/mtn_logo.png" alt="MTN Logo" className="header__brand--link-logo" />
                    </Link>
                </section>
                <section className="header__primary-nav">
@@ -24,7 +24,11 @@ class Header extends Component{
                <section className="header__secondary-nav">
                    <nav className="header__secondary-nav--nav">
                         
-                        <Link to='/personal' className="header__secondary-nav--nav-link">Personal</Link>
+                        <Link to='/personal' className="header__secondary-nav--nav-link">
+                            <span className="header__secondary-nav--nav-circle" />
+                            <span className="header__secondary-nav--nav-text">
+                                Personal
+                            </span></Link>
 
                    </nav>
                </section>
