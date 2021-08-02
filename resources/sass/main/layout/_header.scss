@@ -65,9 +65,11 @@
                     margin-left: 5px;
                     text-align: center;
                     position: relative;
+                    left: 45%;
                     transform: translateX(-50%);
                     margin-top: 4px;
-                    animation: fade .5s ease-in;
+                    animation: fade .4s ease-in;
+                    animation-fill-mode: backwards;
                 }
             }
 
@@ -124,6 +126,15 @@
                     font-size: 1.8rem;
                     opacity: .5;
                   
+                }
+
+                &:hover{
+
+                    &-text{
+                        opacity: .9;
+                    }
+
+                    
                 }
             }
         }
