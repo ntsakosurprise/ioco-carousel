@@ -1,0 +1,57 @@
+
+
+.carousel{
+
+    max-width: 1000px;
+
+    &__item{
+
+        position: absolute;
+        width: 200px;
+        height: 250px;
+
+        &--fig{
+
+            width: 200px;
+            height: 150px;
+            background-color: $color-primary;
+            clip-path: polygon(0 0, 100% 1%, 100% 100%, 1% 89%);
+
+            &-img{
+
+                height: 120px;
+                width: 200px;
+            }
+        }
+    }
+
+    &__item_1{
+
+        left: 5%;
+        transform: translateX(-15%);
+    }
+    &__item_2{
+
+        left: 25%;
+        transform: translateX(-25%);
+    }
+    &__item_3{
+
+        left: 50%;
+        width: 250px;
+        height: 300px;
+        transform: translateX(-50%);
+        background-color: red;
+    }
+    &__item_4{
+
+        left: 65%;
+        transform: translateX(-20%);
+    }
+    &__item_5{
+
+        left: 80%;
+       
+    }
+
+}
