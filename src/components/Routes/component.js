@@ -18,7 +18,7 @@ class Router extends Component{
 
                     routes.map((r,i)=>{
 
-                        return <Public />
+                        return <Public {...this.props}  exact path={r.path} component={r.component} key={i} /> 
                     })
                 }
             </Switch>
@@ -26,4 +26,4 @@ class Router extends Component{
     }
 }
 
-export default withRouter(Router)
+export default Router
