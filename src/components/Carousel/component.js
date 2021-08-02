@@ -74,6 +74,18 @@ class Carousel extends Component{
             <div>
 
                 {this.getCarouselItems()}
+                <section className="carousel__navigators">
+                    <button className="carousel__navigators--p-control">
+                        <span className="carousel__navigators--p-control-text">
+                            Previous
+                        </span>
+                    </button>
+                    <button className="carousel__navigators--n-control">
+                        <span className="carousel__navigators--n-control-text">
+                            Next
+                        </span>
+                    </button>
+                </section>
 
             </div>
         )
