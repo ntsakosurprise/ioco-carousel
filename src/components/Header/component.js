@@ -28,6 +28,7 @@ class Header extends Component{
 
                    </nav>
                </section>
+               <strong className="clearfix" />
             </header>
         )
     }
