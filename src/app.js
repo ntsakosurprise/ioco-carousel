@@ -1,7 +1,13 @@
 import React from 'react'
-import Root from '../src/components/Root/component'
+import Root from './components/Root/component'
 
-export default ()=>{
-
-    return(<Root />)
+function App() {
+  return <h1>Hello React Router</h1>;
 }
+
+export default App
+
+// export default ()=>{
+
+//     return(<Root />)
+// }
