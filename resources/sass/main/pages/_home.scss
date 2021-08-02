@@ -25,17 +25,17 @@
         }
     }
 
-    &__item_1{
+    &__item-num_1{
 
         left: 5%;
         transform: translateX(-15%);
     }
-    &__item_2{
+    &__item-num_2{
 
         left: 25%;
         transform: translateX(-25%);
     }
-    &__item_3{
+    &__item-num_3{
 
         left: 50%;
         width: 250px;
@@ -43,12 +43,12 @@
         transform: translateX(-50%);
         background-color: red;
     }
-    &__item_4{
+    &__item-num_4{
 
         left: 65%;
         transform: translateX(-20%);
     }
-    &__item_5{
+    &__item-num_5{
 
         left: 80%;
        
