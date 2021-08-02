@@ -88,11 +88,14 @@
 
         section{
 
+        
+            background-color: #111110;
+            width: 100%;
             position: relative;
             bottom: 0;
-            background-color: $color-primary;
-            width: 100%;
-            border: 2px 0 2px 0;
+            position: absolute;
+            padding: 2rem;
+            border-radius: 2px 0 0 15px;
 
             button{
 
@@ -101,6 +104,7 @@
                 color: $color-white;
                 text-align: center;
                 display: inline-block;
+                cursor: pointer;
 
                 &::after{
 
