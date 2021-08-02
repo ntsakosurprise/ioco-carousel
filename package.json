@@ -4,6 +4,8 @@
   "description": "this is a 5-card slider for ioco assessment",
   "scripts": {
     "start": "react-scripts start",
+    "watch:dev:sass": "node-sass resources/sass/main.scss public/css/style.css -w",
+    "prod:compile:sass": "node-sass resources/sass/main.scss public/css/style.comp.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC",
