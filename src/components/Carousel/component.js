@@ -5,6 +5,8 @@ class Carousel extends Component{
 
     constructor(){
 
+        super()
+
         this.state = {
 
             carouselItems: [
@@ -44,12 +46,12 @@ class Carousel extends Component{
 
         const carouselElements = carouselItems.map((item,i)=>{
 
-            return <section key={i}>
-                     <figure>
-                         <img src={item.media} alt={item.alt} />
+            return <section className={`carousel__item carousel__item-num_${i}`} key={i}>
+                     <figure className="carousel__item--fig">
+                         <img src={`${item.media}.jpg`} alt={item.alt} className="carousel__item--fig-img" />
                      </figure>
-                     <div>
-                         <h4>{item.text}</h4>
+                     <div className="carousel__item--content">
+                         <h4 className="carousel__item--content-head">{item.text}</h4>
                      </div>
                    </section>
         })
