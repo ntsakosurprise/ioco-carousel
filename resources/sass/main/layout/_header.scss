@@ -52,14 +52,23 @@
                 color: $color-black;
             }
 
-            &::after{
+            &:hover{
 
-                width: 8px;
-                height: 8px;
-                background-color: #ffcc00;
-                margin-right: 15px;
-                border-radius: 50%;
-                display: inline-block;
+                    &::after{
+
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    background-color: #ffcc00;
+                    margin-right: 15px;
+                    border-radius: 50%;
+                    display: block;
+                    margin-left: 5px;
+                    text-align: center;
+                    position: relative;
+                    transform: translateX(-50%);
+                    margin-top: 4px;
+                }
             }
 
             // &:hover{
