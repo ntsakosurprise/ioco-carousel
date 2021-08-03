@@ -116,7 +116,7 @@ class Carousel extends Component{
 
                 {carouselItems.map((item,i)=>{
 
-                    return <section className={`carousel__item carousel__item-num_${i}`} key={i}>
+                    return <section className={`carousel__item carousel__item-num_${i+1}`} key={i}>
                             <figure className="carousel__item--fig">
                                 <img src={`${item.media}.jpg`} alt={item.alt} className="carousel__item--fig-img" />
                             </figure>
