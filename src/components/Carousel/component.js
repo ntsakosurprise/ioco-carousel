@@ -39,34 +39,34 @@ class Carousel extends Component{
         }
     }
 
-    getCarouselItems = ()=>{
+    // getCarouselItems = ()=>{
 
-        const {state} = this 
-        const {carouselItems} = state 
+    //     const {state} = this 
+    //     const {carouselItems} = state 
 
-        const carouselElements = carouselItems.map((item,i)=>{
+    //     const carouselElements = carouselItems.map((item,i)=>{
 
-            return <section className={`carousel__item carousel__item-num_${i}`} key={i}>
-                     <figure className="carousel__item--fig">
-                         <img src={`${item.media}.jpg`} alt={item.alt} className="carousel__item--fig-img" />
-                     </figure>
-                     <div className="carousel__item--content">
-                         <h4 className="carousel__item--content-head">{item.text}</h4>
-                     </div>
-                     {
+    //         return <section className={`carousel__item carousel__item-num_${i}`} key={i}>
+    //                  <figure className="carousel__item--fig">
+    //                      <img src={`${item.media}.jpg`} alt={item.alt} className="carousel__item--fig-img" />
+    //                  </figure>
+    //                  <div className="carousel__item--content">
+    //                      <h4 className="carousel__item--content-head">{item.text}</h4>
+    //                  </div>
+    //                  {
                      
-                            i+1 === 3 
-                                ? <section className="carousel__item--action">
-                                        <button className="carousel__item--action-btn">Start Here</button>
-                                    </section>
-                                : null
-                     }
-                   </section>
-        })
+    //                         i+1 === 3 
+    //                             ? <section className="carousel__item--action">
+    //                                     <button className="carousel__item--action-btn">Start Here</button>
+    //                                 </section>
+    //                             : null
+    //                  }
+    //                </section>
+    //     })
 
-        return carouselElements
+    //     return carouselElements
 
-    }
+    // }
 
     getNextCard = ()=>{
 
