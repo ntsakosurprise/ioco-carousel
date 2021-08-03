@@ -108,10 +108,32 @@ class Carousel extends Component{
 
     render(){
 
+        const {state} = this 
+        const {carouselItems} = state 
+
         return(
             <div>
 
-                {this.getCarouselItems()}
+                {carouselItems.map((item,i)=>{
+
+                    return <section className={`carousel__item carousel__item-num_${i}`} key={i}>
+                            <figure className="carousel__item--fig">
+                                <img src={`${item.media}.jpg`} alt={item.alt} className="carousel__item--fig-img" />
+                            </figure>
+                            <div className="carousel__item--content">
+                                <h4 className="carousel__item--content-head">{item.text}</h4>
+                            </div>
+                            {
+                            
+                                    i+1 === 3 
+                                        ? <section className="carousel__item--action">
+                                                <button className="carousel__item--action-btn">Start Here</button>
+                                            </section>
+                                        : null
+                            }
+                        </section>
+                    })
+                    }
                 <section className="carousel__navigators">
                     <button className="carousel__navigators--p-control" onClick={(e)=>this.showCardInContext('previous',e)}>
                         <span className="carousel__navigators--p-control-text">
