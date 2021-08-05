@@ -13,6 +13,9 @@ class Header extends Component{
                    </Link>
                </section>
                <section className="header__primary-nav">
+
+                   <span><i class="fa fa-plus" aria-hidden="true"></i>
+                    </span>
                    <nav className="header__primary-nav--nav">
                         <Link to='/store' className="header__primary-nav--nav-link">Store</Link>
                         <Link to='/products-services' className="header__primary-nav--nav-link">Products & Services</Link>
