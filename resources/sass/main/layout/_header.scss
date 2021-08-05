@@ -8,6 +8,33 @@
     box-shadow: -15px 10px 25px 5px rgba(146, 104, 104, 0.04);
     margin-bottom: 120px;
 
+    &__menu{
+
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+
+        span{
+
+            display: block;
+            height: 2px;
+            width: 25px;
+            background-color: red;
+            margin-bottom: 5px;
+    
+        }
+
+        &-bar-2{
+
+            display: block;
+            height: 2px;
+            width: 35px;
+            background-color: red;
+            margin-bottom: 5px;
+        
+        }
+    }
+
     &__brand,&__primary-nav,&__secondary-nav{
 
         float: left;
