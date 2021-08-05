@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 
 class CarouselSlick extends Component{
 
-    constructor(){
+    constructor(props){
 
         super(props)
 
