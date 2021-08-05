@@ -4,9 +4,9 @@ import Slider from 'react-slick'
 
 class CarouselSlick extends Component{
 
-    constructor(props){
+    constructor(){
 
-        super(props)
+        super()
 
         this.state = {
 
@@ -35,23 +35,51 @@ class CarouselSlick extends Component{
                     media: '/img/carousel_img_5',
                     text: 'Upgrade',
                     alt: 'Carousel Upgrade image'
-                }
+                },
+                {
+                    media: '/img/carousel_img_3',
+                    text: 'Get a device',
+                    alt: 'Carousel Get a device image'
+                },
+                
             ],
+            isAnimationClass: false,
             nextImageId: 0,
-            width: 0
+            width: 0,
+            height: 0,
         }
+
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
+    
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+      }
 
+    componentDidMount(){
+
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+       
+    }
+
+    componentWillUnmount(){
+
+        window.removeEventListener('resize', this.updateWindowDimensions);
+      
+     }
+  
+
+  
 
     render(){
 
         const {state} = this 
         const {carouselItems,nextImageId=0,width=0} = state 
         const toShow = width > 900 ? 5 : width <= 540 ? 1 : 3
-
-        const settings = {
-
+        const  settings = {
+    
             infinite: true,
             autoPlay: true,
             speed: 500,
@@ -61,13 +89,16 @@ class CarouselSlick extends Component{
             dots: true,
             className: 'slider-height',
             dotsClass: "slick-dots slick-thumb",
+
             beforeChange: (current,next)=> this.setState({nextImageId:next}),
-            customPaging: ()=>{
-                
+            customPaging: (i,slider)=>{
+                console.log('THE SLIDER')
+                // console.log(slider)
+                console.log(i)
                 return(<div className="dot"></div>)
-            },
-           
-        }
+                return (  <p className="carousel__counter">{i+1}</p>)},
+            // slidesToScroll: 1
+        };
 
         return(
             <div className="carousel">
@@ -75,15 +106,15 @@ class CarouselSlick extends Component{
                 <h4 className="carousel__title">
                     <span className="carousel__title--top-text" >What are you</span>
                     <span className="carousel__title--bottom-text">here to do?</span>
-                </h4>
-
+                    </h4>
                 <Slider {...settings}>
 
-
-
+                    
                     {carouselItems.map((item,i)=>{
 
-                        return <section className={`carousel__item carousel__item-num_${i+1}`} key={i}>
+                        // return <div><img src={`${item.media}.jpg`} key={i} alt={item.alt}  /></div>
+
+                        return <div className={`carousel__item carousel__item-num_${i+1}`} key={i}>
                                 <figure className="carousel__item--fig">
                                     <img src={`${item.media}.jpg`} alt={item.alt} className="carousel__item--fig-img" />
                                 </figure>
@@ -98,12 +129,28 @@ class CarouselSlick extends Component{
                                                 </section>
                                             : null
                                 }
-                            </section>
-                        })
+                            </div>
+                        })}
+
+                  
+
                     
-                        }
-                    </Slider>
-                
+                    {/* this.getCarouselItems() */}
+                    
+                </Slider>
+                {/* <section className="carousel__navigators">
+                    <button className="carousel__navigators--p-control" onClick={(e)=>this.showCardInContext('previous',e)}>
+                        <span className="carousel__navigators--p-control-text">
+                            Previous
+                        </span>
+                    </button>
+                    <button className="carousel__navigators--n-control" onClick={(e)=>this.showCardInContext('next',e)}>
+                        <span className="carousel__navigators--n-control-text">
+                            Next
+                        </span>
+                    </button>
+                </section> */}
+
             </div>
         )
     }
