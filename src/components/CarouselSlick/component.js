@@ -91,12 +91,11 @@ class CarouselSlick extends Component{
             dotsClass: "slick-dots slick-thumb",
 
             beforeChange: (current,next)=> this.setState({nextImageId:next}),
-            customPaging: (i,slider)=>{
-                console.log('THE SLIDER')
-                // console.log(slider)
+            customPaging: (i)=>{
+              
                 console.log(i)
                 return(<div className="dot"></div>)
-                return (  <p className="carousel__counter">{i+1}</p>)},
+                },
             // slidesToScroll: 1
         };
 
