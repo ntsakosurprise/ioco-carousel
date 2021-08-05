@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import Carousel from '../Carousel/component'
+import SlickCarousel from '../CarouselSlick/component'
 
 class Home extends Component{
 
@@ -8,7 +9,8 @@ class Home extends Component{
 
         return(
             
-            <Carousel />
+            // <Carousel />
+            <SlickCarousel />
         )
     }
 }
