@@ -47,12 +47,39 @@ class CarouselSlick extends Component{
     render(){
 
         const {state} = this 
-        const {carouselItems,width,nextImageId} = state 
+        const {carouselItems,nextImageId=0,width=0} = state 
+        const toShow = width > 900 ? 5 : width <= 540 ? 1 : 3
+
+        const settings = {
+
+            infinite: true,
+            autoPlay: true,
+            speed: 500,
+            slidesToShow:  toShow,
+            centerMode: true, 
+            centerPadding: 0,
+            dots: true,
+            className: 'slider-height',
+            dotsClass: "slick-dots slick-thumb",
+            beforeChange: (current,next)=> this.setState({nextImageId:next}),
+            customPaging: ()=>{
+                
+                return(<div className="dot"></div>)
+            },
+           
+        }
 
         return(
             <div className="carousel">
 
-                <Slider>
+                <h4 className="carousel__title">
+                    <span className="carousel__title--top-text" >What are you</span>
+                    <span className="carousel__title--bottom-text">here to do?</span>
+                </h4>
+
+                <Slider {...settings}>
+
+
 
                     {carouselItems.map((item,i)=>{
 
