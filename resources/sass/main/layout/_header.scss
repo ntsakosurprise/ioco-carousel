@@ -12,8 +12,9 @@
 
         cursor: pointer;
         position: absolute;
-        right: 5%;
+        right: 3%;
         z-index: 5;
+        top: 27px;
 
         span{
 
@@ -22,12 +23,12 @@
             width: 25px;
             background-color: red;
             margin-bottom: 5px;
+            cursor: pointer;
     
         }
 
         &-bar-2{
 
-           
             width: 35px !important;
            
         
@@ -53,6 +54,7 @@
             position: relative;
             font-size: 20px;
             margin-top: 2px;
+            cursor: pointer;
         }
     }
     &__brand,&__primary-nav,&__secondary-nav{
@@ -101,6 +103,8 @@
                 padding-top: 5rem;
                 height: 100vh;
                 z-index: 3;
+                opacity: 0;
+                animation: appear .5s ease-in;
             }
 
             &-link{
@@ -174,11 +178,19 @@
 
         float: none;
         position: absolute;
-        right: 0;
+        right: 15%;
         width: 50%;
-        text-align: initial;
+        text-align: right;
 
         }
+
+        @include responsive(phone){
+
+         
+            right: 20%;
+           
+    
+            }
 
 
         &--nav{
@@ -240,4 +252,22 @@
        
         opacity: 1
     }
+}
+
+
+@keyframes appear {
+
+	2% {
+	  opacity: .2
+	}
+    10%{
+        opacity: .3
+      }
+    20% {
+        opacity: .7
+    }
+    
+	100% {
+        opacity: 1
+	}
 }
