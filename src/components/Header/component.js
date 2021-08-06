@@ -11,7 +11,28 @@ class Header extends Component{
             showMenu: false,
             width:0
         }
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
+
+    
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+      }
+
+    componentDidMount(){
+
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+       
+    }
+
+    componentWillUnmount(){
+
+        window.removeEventListener('resize', this.updateWindowDimensions);
+      
+     }
+  
+
 
     toggleMenu = ()=>{
 
