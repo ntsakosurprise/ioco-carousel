@@ -93,7 +93,7 @@ class CarouselSlick extends Component{
             beforeChange: (current,next)=> this.setState({nextImageId:next}),
             customPaging: (i)=>{
               
-                console.log(i)
+                // console.log(i)
                 return(<div className="dot"></div>)
                 },
             // slidesToScroll: 1
