@@ -18,6 +18,8 @@ class Header extends Component{
        const {state} = this 
        const {showMenu=false} = state 
 
+       console.log('tOGGLE MENU')
+
        this.setState({showMenu: !showMenu})
     }
 
@@ -39,7 +41,7 @@ class Header extends Component{
                     
                     {
 
-                        width <= 600 
+                        width <= 600 && !showMenu
                         ? <div  className="header__menu" onClick={()=>this.toggleMenu()}>
     
                             <span className="header__menu-bar-1"></span>
@@ -48,6 +50,15 @@ class Header extends Component{
                         </div>
                         : null
                         }
+
+                    {
+
+                    width <= 600 && showMenu
+                    ? <div  className="header__close" onClick={()=> this.toggleMenu()}>
+                        <span className="header__close-text">x</span>
+                    </div>
+                    : null
+                    }
                     
                     {/* <div  className="header__menu" onClick={()=>this.toggleMenu()}>
 
@@ -55,24 +66,21 @@ class Header extends Component{
                         <span className="header__menu-bar-2"></span>
                         <span className="header__menu-bar-3"></span>
                     </div> */}
-                   <nav className="header__primary-nav--nav">
+                   
 
                    
 
-                    {
+                   
+                       {
 
-                        width <= 600 
-                        ? <div  className="header__close" onClick={()=> this.toggleMenu()}>
-                            <span className="header__text">x</span>
-                        </div>
-                        : null
-                    }
-                        <Link to='/store' className="header__primary-nav--nav-link">Store</Link>
-                        <Link to='/products-services' className="header__primary-nav--nav-link">Products & Services</Link>
-                        <Link to='/help-support' className="header__primary-nav--nav-link">Help & Support</Link>
+                       width <= 600
+                        ? showMenu ? primaryMenu() : null
+                        : primaryMenu()
+                       
+                       } 
                         
 
-                   </nav>
+                 
                </section>
                <section className="header__secondary-nav">
                    <nav className="header__secondary-nav--nav">
@@ -93,3 +101,21 @@ class Header extends Component{
 
 
 export default Header
+
+
+function primaryMenu(){
+
+    return(
+
+       
+
+        <nav className="header__primary-nav--nav">
+            <Link to='/store' className="header__primary-nav--nav-link">Store</Link>
+            <Link to='/products-services' className="header__primary-nav--nav-link">Products & Services</Link>
+            <Link to='/help-support' className="header__primary-nav--nav-link">Help & Support</Link>
+        </nav>
+
+       
+
+    )
+}
