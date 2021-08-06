@@ -105,6 +105,7 @@
                 z-index: 3;
                 opacity: 0;
                 animation: appear .5s ease-in;
+                animation-fill-mode: forwards;
             }
 
             &-link{
@@ -225,10 +226,24 @@
                   
                 }
 
-                &:hover{
+                &:hover &-text{
 
                     &-text{
-                        opacity: .9;
+                        opacity: 1;
+                        transition: all .5s ease-in;
+                    }
+                   
+
+                    
+                }
+
+                &:hover &-circle{
+
+                   
+                    &-circle{
+                        
+                        transform: rotate((360deg));
+                        transition: all .5s ease-in;
                     }
 
                     
