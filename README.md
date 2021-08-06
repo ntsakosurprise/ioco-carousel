@@ -1,80 +1,46 @@
 
-# Introduction
+# Project Building Instructions
 
-This is a 5-card carousel assessment for iOCO.
-
-# Installation 
-
-  ```
-  npm install --save anzii-hello-example
-  
-  ```
-
-# Usage 
+iOCO carousel a simple and lightweight carousel that utilizes the react framework. 
 
 
-    ```js
 
-        const anzii = require('anzii') 
-        const Hello = require('anzii-hello-example') // require anzii-hello-example
-        anzii({Hello}) // pass it to anzii() method
+ When I first started work on this project, I wanted to achieve two things: 
 
-    ```
+1. Build a custom carousel component that was entirely based on my own algorithms and taste of design
+
+2. Build a second reusable carousel that was entirely based on others' approaches, and thereby utilising the react framework libraries
 
 
-### Example Plugin Hello
+As I started out the project, I set out to follow the intended approach, but after some time in the process, I encountered some minor issue with the time and some other project I was part of. 
+
+By the time I got off the other project that had taken my needed time, I realised that I had less time to work on my initial approach, so I went to skip the custom approach and just went with the project really required me to do, which is going the second option route.
+
+Following that second option in building the project, I took the following approach: 
+
+1. I installed a popular react library known as react-slick to kick-start the project. I have used this library in the past with the jQuery library, so it became easier for me to quickly the project going. 
+
+2. I set up my carousel component with a state made up of items that I needed displayed on the carousel. 
+
+3. I've made some configurations to get the carousel to where I wanted it. 
+
+4. I did an override of some of the react-slick styles to get the exact design design and outcome that I needed 
+
+5. Because I had already styled the content, getting the component to work was quick. 
+
+6. I have used the external CSS approach for all my CSS. 
+
+7. The code uses the latest React framework (as of this publish) for the project, albeit with a slight old approach (I could have used the latest approach, but I decided otherwise just to quickly save time) 
+
+
+8. The project uses sass for creating the styling information. 
+
+9. The project is catered for three popular devices using responsive design.
+
      
 
 
-```js
-class Hello{
-	
-	
-	constructor(pao){
-		
-		this.pao = pao // Every plugin is passed this object
-	}
-	
-	init(){
-  
-        this.listens({
-            
-            'handle-hello-task': this.handleHelloTask.bind(this), // Event and handling method
-        
-        }) // Call listens() method (available to every anzii plugin) to set events that this module  listens to
-	
-	}// Define the required init() method
 
-
-
-    handleHelloTask(data){
-
-        const self = this  
-    
-        self.callback = data.callback 
-        const {payload} = data 
-        const {user} = payload 
-        const {name,surname} = user // assume name to be "Ntsako" and surname to be "Mashele"
-        const message = `Hello ${name} ${surname}, I'm happy to meet you.'` 
-        return self.callback(null,{message: message})
-
-       
-    }// This method is called whenever handle-hello-event is emitted
-
-	
-	
-	
-}
- 
-
-export default Hello 
-
-```
-
-
-Navigate to ***http://localhost:3000/hello/ntsako/mashele*** and you should see the text  ***Hello Ntsako Mashele, I'm happy to meet you***  on your browser.
-
-**Please note:** ***The Ntsako and Mashele parameteres used above are optional, use your own parameteres***
 
 
 # Stay In Touch
