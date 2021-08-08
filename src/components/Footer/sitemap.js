@@ -39,7 +39,7 @@ export default ()=>{
 
     return(
 
-        <div>
+        <div className="footer__sitemap">
 
            
             {showSitemap()}
