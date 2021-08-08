@@ -1,5 +1,5 @@
 import React from 'react' 
-import sitemap from './sitemap'
+import links from './links'
 
 
 
@@ -9,7 +9,7 @@ export default ()=>{
 
     const showSitemap = ()=>{
 
-       return sitemap.map((group,i)=>{
+       return links.map((group,i)=>{
 
          return (
 
