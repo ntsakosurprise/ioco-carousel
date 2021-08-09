@@ -87,7 +87,7 @@ body {
     width: 25%; }
   .footer__brand--logo {
     display: block;
-    width: 100px;
+    width: 250px;
     margin-bottom: 1rem; }
   .footer__brand--text {
     display: block;
@@ -107,19 +107,24 @@ body {
   .footer__business--link {
     display: block;
     color: white;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    width: 50px; }
   .footer__social--link {
     display: inline-block;
     font-size: 1.2rem; }
   .footer__sitemap {
-    background-color: #0d0f0f; }
+    background-color: #0d0f0f;
+    height: 400px;
+    padding-top: 5rem; }
     .footer__sitemap--i {
       float: left;
       width: 19%; }
       .footer__sitemap--i-nav-link {
         display: block;
         color: white;
-        font-size: 1.2rem; }
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        text-decoration: underline; }
   .footer__copyright {
     text-align: center;
     font-size: 1.8rem;
