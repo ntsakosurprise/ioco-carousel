@@ -11,7 +11,7 @@ class Home extends Component{
         const settings = {
             autoplay:true,
             speed: 300,
-            slidesToShow: 1
+            slidesToShow: 5
 
         }
 
