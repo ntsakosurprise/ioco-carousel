@@ -11,7 +11,7 @@ class Home extends Component{
         return(
             
             // <Carousel />
-            <SlickCarousel settings={{items: [...items],autoPlay:true,speed: 300,shouldShowHead:true}} />
+            <SlickCarousel settings={{autoPlay:true,speed: 300,shouldShowHead:true}} items={[...items]} shouldShowHead={true} />
 
         )
     }
