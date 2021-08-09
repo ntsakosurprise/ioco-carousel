@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 function SlideMan(props){
 
-       const {media,index} = props
+       const {media,alt,index} = props
    
         return(
             
@@ -15,4 +16,14 @@ function SlideMan(props){
 }
 
 
-export default SlideMan
+export default SlideMan 
+
+
+
+SlideMan.PropTypes = {
+
+   
+    media: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired
+}                                  
