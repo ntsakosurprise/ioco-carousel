@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 
 const Basic = (props)=>{
 
-    const {nextImageId,media,alt,index} = props
+    const {nextImageId,media,alt,text,index} = props
     
     
     return(
@@ -20,7 +20,7 @@ const Basic = (props)=>{
                                 <img src={`${media}.jpg`} alt={alt} className="carousel__item--fig-img" />
                             </figure>
                             <div className="carousel__item--content">
-                                <h4 className="carousel__item--content-head">{item.text}</h4>
+                                <h4 className="carousel__item--content-head">{text}</h4>
                             </div>
                             {
                             
@@ -46,7 +46,7 @@ const Basic = (props)=>{
 export default Basic;
 
 
-Component.PropTypes = {
+Basic.PropTypes = {
 
     nextImageId: PropTypes.number.isRequired,
     media: PropTypes.string.isRequired,
