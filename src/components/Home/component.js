@@ -9,7 +9,7 @@ class Home extends Component{
     render(){
 
         const settings = {
-            autoPlay:true,
+            autoplay:true,
             speed: 300,
             slidesToShow: 1
 
@@ -18,7 +18,7 @@ class Home extends Component{
         return(
             
             // <Carousel />
-            <SlickCarousel settings={} items={[...items]} shouldShowHead={true} />
+            <SlickCarousel settings={settings} items={[...items]} shouldShowHead={true} />
 
         )
     }
