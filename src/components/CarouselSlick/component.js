@@ -26,9 +26,10 @@ export default (props)=>{
 
     },[width,nextImageId,isAnimationClass])
 
-    const {settings={},shouldShowHead=false,items=[]} = props 
+    const {settings={},shouldShowHead=false,items=[],slidePapper=null} = props 
     const {slidesToShow=1} = settings
     const toShow = slidesToShow === 1 ? slidesToShow : width > 900 ? 5 : width <= 540 ? 1 : 3 
+    const SlidePapper =  slidePapper ? slidePapper : null
 
     console.log('THE ITEMS')
 
@@ -75,9 +76,12 @@ export default (props)=>{
                     
                      {items.map((item,i)=>{
 
+                         console.log('THE ITEM')
+                         console.log(item)
+
                         // return <div><img src={`${item.media}.jpg`} key={i} alt={item.alt}  /></div>
 
-                        return <Basic {...item} index={i} />
+                        return  slidePapper ? <SlidePapper {...item} index={i} /> :<Basic {...item} index={i} />
 
                         })
                         }
