@@ -1,0 +1,100 @@
+
+.ioco{
+
+
+
+    &__carousel-item{
+
+        background-color: green;
+        transition: all 1.5s ease-in-out;
+        
+        &--pik{
+
+            display: block;
+        }
+
+
+        // @include responsive(tablet-landscape){
+
+        //     width: 150px !important;
+        // }
+
+        // @include responsive(tablet-portrait){
+
+        //     width: 200px !important;
+        // }
+
+        
+        // @include responsive(tablet-port-small){
+
+        //     width: 150px !important;
+        // }
+       
+       
+        
+    }
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+ 
+        opacity: .5;
+    }
+    20% {
+ 
+        opacity: .6;
+    }
+    40% {
+ 
+        opacity: .8;
+    }
+    90% {
+ 
+        opacity: .9;
+    }
+    100% {
+        
+        opacity:1 ;
+    }
+}
+
+
+
+
+@keyframes scalr {
+
+	2% {
+	  transform: scale(.8)
+	}
+    10% {
+        transform: scale(.85)
+      }
+  
+    40% {
+    transform: scale(.9)
+    }
+    
+	100% {
+        transform: scale(1)
+	}
+}
+
+@keyframes appear {
+
+	2% {
+	  opacity: .2
+	}
+    10%{
+        opacity: .3
+      }
+    20% {
+        opacity: .7
+    }
+    
+	100% {
+        opacity: 1
+	}
+}
+

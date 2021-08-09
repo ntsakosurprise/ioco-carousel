@@ -766,3 +766,41 @@ body {
 .slick-dots.slick-thumb li.slick-active {
   background-color: red;
   width: 24px; }
+
+.ioco__carousel-item {
+  background-color: green;
+  transition: all 1.5s ease-in-out; }
+  .ioco__carousel-item--pik {
+    display: block; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: .5; }
+  20% {
+    opacity: .6; }
+  40% {
+    opacity: .8; }
+  90% {
+    opacity: .9; }
+  100% {
+    opacity: 1; } }
+
+@keyframes scalr {
+  2% {
+    transform: scale(0.8); }
+  10% {
+    transform: scale(0.85); }
+  40% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes appear {
+  2% {
+    opacity: .2; }
+  10% {
+    opacity: .3; }
+  20% {
+    opacity: .7; }
+  100% {
+    opacity: 1; } }
