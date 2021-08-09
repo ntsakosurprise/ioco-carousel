@@ -9,7 +9,7 @@ function SlideMan(props){
         return(
             
             <div className="ioco__carousel-item" key={index}>
-                <img src={media} alt={alt}  className="ioco__carousel-item--pik"  />
+                <img src={`${media}.jpg`} alt={alt}  className="ioco__carousel-item--pik"  />
             </div>
         )
     
