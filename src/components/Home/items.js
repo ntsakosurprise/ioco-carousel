@@ -23,5 +23,10 @@ export default [
         media: '/img/carousel_img_5',
         text: 'Upgrade',
         alt: 'Carousel Upgrade image'
+    },
+    {
+        media: '/img/carousel_img_3',
+        text: 'Get a device',
+        alt: 'Carousel Get a device image'
     }
 ]
