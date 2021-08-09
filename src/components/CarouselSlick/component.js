@@ -26,8 +26,9 @@ export default (props)=>{
 
     },[width,nextImageId,isAnimationClass])
 
-    const {settings={},shouldShowHead=false,items=[]} = props
-    const toShow = width > 900 ? 5 : width <= 540 ? 1 : 3 
+    const {settings={},shouldShowHead=false,items=[]} = props 
+    const {slidesToShow=1} = settings
+    const toShow = slidesToShow === 1 ? slidesToShow : width > 900 ? 5 : width <= 540 ? 1 : 3 
 
     console.log('THE ITEMS')
 
@@ -36,7 +37,8 @@ export default (props)=>{
     const  caraSettings = {
 
         infinite: true,
-        autoPlay: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
         speed: 500,
         slidesToShow:  toShow,
         centerMode: true, 
@@ -51,8 +53,8 @@ export default (props)=>{
             console.log(i)
             return(<div className="dot"></div>)
             },
-            // ...settings
-        // slidesToScroll: 1
+        ...settings,
+        slidesToScroll: 1
     };
     
     console.log(caraSettings)
