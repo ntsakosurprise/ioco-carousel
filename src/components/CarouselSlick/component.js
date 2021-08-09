@@ -26,8 +26,12 @@ export default (props)=>{
 
     },[width,nextImageId,isAnimationClass])
 
-    const {settings={},shouldShowHead=false} = props
+    const {settings={},shouldShowHead=false,items=[]} = props
     const toShow = width > 900 ? 5 : width <= 540 ? 1 : 3 
+
+    console.log('THE ITEMS')
+
+    console.log(items)
     
     const  caraSettings = {
 
@@ -47,10 +51,11 @@ export default (props)=>{
             console.log(i)
             return(<div className="dot"></div>)
             },
-            ...settings
+            // ...settings
         // slidesToScroll: 1
     };
     
+    console.log(caraSettings)
     
     return(
 
