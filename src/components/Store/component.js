@@ -12,7 +12,7 @@ class Store extends Component{
             autoplay:true,
             speed: 300,
             slidesToShow: 1,
-            autoplaySpeed: 1500,
+            autoplaySpeed: 5000,
             dots: true
 
         }
