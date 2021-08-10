@@ -56,6 +56,9 @@
 
     &__brand{
 
+        width: 35%;
+        text-align: left;
+
         &--logo{
 
             display: block;
@@ -69,6 +72,7 @@
             font-size: 1.5rem;
             text-decoration: underline;
             color: rgb(255, 255, 255);
+            margin-left: 5%;
         }
     }
 
