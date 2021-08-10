@@ -31,7 +31,8 @@ export default (props)=>{
     const toShow = slidesToShow === 1 ? slidesToShow : width > 900 ? 5 : width <= 540 ? 1 : 3 
     const SlidePapper =  slidePapper ? slidePapper : null
 
-    console.log('THE ITEMS')
+    console.log('toshow')
+    console.log(toShow)
     
     const  caraSettings = {
 
@@ -39,7 +40,7 @@ export default (props)=>{
         autoplay: true,
         autoplaySpeed: 10000,
         speed: 500,
-        slidesToShow:  toShow,
+      
         centerMode: true, 
         centerPadding: 0,
         dots: true,
@@ -53,11 +54,12 @@ export default (props)=>{
             return(<div className="dot"></div>)
             },
         ...settings,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        slidesToShow:  toShow,
     };
     
-    console.log(caraSettings)
-    
+    console.log('THE WIDTH')
+    console.log(width)
     return(
 
         <div className="carousel">
@@ -74,8 +76,7 @@ export default (props)=>{
                     
                      {items.map((item,i)=>{
 
-                         console.log('THE ITEM')
-                         console.log(item)
+                        
 
                         // return <div><img src={`${item.media}.jpg`} key={i} alt={item.alt}  /></div>
 
