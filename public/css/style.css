@@ -74,8 +74,11 @@ body {
       color: #dee3ea;
       padding-left: 5%;
       margin-top: 3rem; }
-      .footer__clipped--content-heart-text-1, .footer__clipped--content-heart-text-2 {
-        display: inline-block; }
+      .footer__clipped--content-heart {
+        font-size: 2rem;
+        margin-top: 4rem; }
+        .footer__clipped--content-heart-text-1, .footer__clipped--content-heart-text-2 {
+          display: inline-block; }
     .footer__clipped--overlay {
       width: 100%;
       height: 100%;
@@ -91,17 +94,20 @@ body {
     color: white;
     padding-top: 5rem; }
   .footer__tool {
-    float: left;
-    width: 25%; }
-  .footer__brand--logo {
-    display: block;
-    width: 250px;
-    margin-bottom: 1rem; }
-  .footer__brand--text {
-    display: block;
-    font-size: 1.5rem;
-    text-decoration: underline;
-    color: white; }
+    display: inline-block;
+    width: 20%; }
+  .footer__brand {
+    width: 35%;
+    text-align: initial; }
+    .footer__brand--logo {
+      display: block;
+      width: 250px;
+      margin-bottom: 1rem; }
+    .footer__brand--text {
+      display: block;
+      font-size: 1.5rem;
+      text-decoration: underline;
+      color: white; }
   .footer__contact--title {
     font-size: 1.5rem;
     margin-bottom: 2rem; }
