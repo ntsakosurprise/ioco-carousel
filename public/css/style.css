@@ -74,8 +74,11 @@ body {
       color: #dee3ea;
       padding-left: 5%;
       margin-top: 3rem; }
-      .footer__clipped--content-heart-text-1, .footer__clipped--content-heart-text-2 {
-        display: inline-block; }
+      .footer__clipped--content-heart {
+        font-size: 2rem;
+        margin-top: 4rem; }
+        .footer__clipped--content-heart-text-1, .footer__clipped--content-heart-text-2 {
+          display: inline-block; }
     .footer__clipped--overlay {
       width: 100%;
       height: 100%;
