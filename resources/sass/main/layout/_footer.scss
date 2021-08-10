@@ -10,11 +10,22 @@
         background-color: #444662;
         position: relative;
 
+
+        @include responsive(tablet-portrait){
+
+            height: 60vh;
+        }
+
         &--content{
             font-size: 10rem;
             color: #dee3ea;
             padding-left: 5%;
             margin-top: 3rem;
+
+            @include responsive(tablet-portrait){
+
+               font-size: 4rem;
+            }
 
             &-heart{
 
@@ -37,6 +48,11 @@
             background-color: $color-primary;
             top: 0;
             clip-path: polygon(33% 68%, 100% 0%, 99% 100%, 0% 100%);
+
+            @include responsive(tablet-portrait){
+
+                height: 60vh;
+            }
         }
     }
 

@@ -32,8 +32,6 @@ export default (props)=>{
     const SlidePapper =  slidePapper ? slidePapper : null
 
     console.log('THE ITEMS')
-
-    console.log(items)
     
     const  caraSettings = {
 

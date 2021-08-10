@@ -15,8 +15,8 @@ export default ()=>{
 
      <div>
          <Clipped />
-         <FooterBottom />
-         <Sitemap />
+         {/* <FooterBottom />
+         <Sitemap /> */}
          <Copyright />
      </div>
 

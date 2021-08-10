@@ -69,11 +69,17 @@ body {
     height: 100vh;
     background-color: #444662;
     position: relative; }
+    @media only screen and (max-width: 900px) {
+      .footer__clipped {
+        height: 60vh; } }
     .footer__clipped--content {
       font-size: 10rem;
       color: #dee3ea;
       padding-left: 5%;
       margin-top: 3rem; }
+      @media only screen and (max-width: 900px) {
+        .footer__clipped--content {
+          font-size: 4rem; } }
       .footer__clipped--content-heart {
         font-size: 2rem;
         margin-top: 4rem; }
@@ -87,6 +93,9 @@ body {
       background-color: #ffcc00;
       top: 0;
       clip-path: polygon(33% 68%, 100% 0%, 99% 100%, 0% 100%); }
+      @media only screen and (max-width: 900px) {
+        .footer__clipped--overlay {
+          height: 60vh; } }
   .footer__company {
     width: 100%;
     background-color: #212046;
@@ -97,7 +106,7 @@ body {
     display: inline-block;
     width: 20%; }
   .footer__brand {
-    width: 35%;
+    width: 35% !important;
     text-align: initial; }
     .footer__brand--logo {
       display: block;
@@ -107,7 +116,8 @@ body {
       display: block;
       font-size: 1.5rem;
       text-decoration: underline;
-      color: white; }
+      color: white;
+      margin-left: 5%; }
   .footer__contact--title {
     font-size: 1.5rem;
     margin-bottom: 2rem; }
@@ -808,10 +818,27 @@ body {
   width: 24px; }
 
 .ioco__carousel-item {
-  background-color: green;
   transition: all 1.5s ease-in-out; }
   .ioco__carousel-item--pik {
     display: block; }
+    @media only screen and (max-width: 1200px) {
+      .ioco__carousel-item--pik {
+        width: 900px; } }
+    @media only screen and (max-width: 900px) {
+      .ioco__carousel-item--pik {
+        width: 800px; } }
+    @media only screen and (max-width: 800px) {
+      .ioco__carousel-item--pik {
+        width: 600px; } }
+    @media only screen and (max-width: 600px) {
+      .ioco__carousel-item--pik {
+        width: 540px; } }
+    @media only screen and (max-width: 540px) {
+      .ioco__carousel-item--pik {
+        width: 450px; } }
+    @media only screen and (max-width: 450px) {
+      .ioco__carousel-item--pik {
+        width: 300px; } }
 
 @keyframes fadeIn {
   0% {
