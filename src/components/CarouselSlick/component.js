@@ -80,13 +80,13 @@ export default (props)=>{
 
                         // return <div><img src={`${item.media}.jpg`} key={i} alt={item.alt}  /></div>
 
-                        return  slidePapper ? <SlidePapper {...item} index={i} /> :<Basic {...item} index={i} />
+                        return  slidePapper ? <SlidePapper {...item} index={i} /> :<Basic {...item} nextImageId={nextImageId} index={i} />
 
                         })
                         }
 
                   
-
+                    {/* <strong className="clearfix" /> */}
                     
                     {/* this.getCarouselItems() */}
                     

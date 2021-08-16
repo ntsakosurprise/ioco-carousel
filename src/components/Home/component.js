@@ -9,7 +9,7 @@ class Home extends Component{
     render(){
 
         const settings = {
-            autoplay:true,
+            autoplay:false,
             speed: 300,
             slidesToShow: 5
 
