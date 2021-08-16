@@ -37,7 +37,7 @@ export default (props)=>{
     const  caraSettings = {
 
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 10000,
         speed: 500,
       
@@ -54,7 +54,7 @@ export default (props)=>{
             return(<div className="dot"></div>)
             },
         ...settings,
-        slidesToScroll: 1,
+        //slidesToScroll: 1,
         slidesToShow:  toShow,
     };
     
@@ -80,7 +80,7 @@ export default (props)=>{
 
                         // return <div><img src={`${item.media}.jpg`} key={i} alt={item.alt}  /></div>
 
-                        return  slidePapper ? <SlidePapper {...item} index={i} /> :<Basic {...item} nextImageId={nextImageId} index={i} />
+                        return  slidePapper ? <SlidePapper {...item} index={i}  /> :<Basic {...item} index={i} nextImageId={nextImageId} />
 
                         })
                         }
